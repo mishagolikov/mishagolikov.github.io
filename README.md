@@ -9,7 +9,7 @@ This is my **personal portfolio website**, built with **React** and **JavaScript
 ## 🛠️ Tech Stack
 
 - **Frontend**: React, JavaScript, HTML, CSS, Tailwind CSS  
-- **Deployment**: [Insert Hosting Service]  
+- **Deployment**: AWS 
 - **Version Control**: Git & GitHub  
 
 ## 📂 Features
@@ -25,7 +25,7 @@ This is my **personal portfolio website**, built with **React** and **JavaScript
 
 ## 📜 About Me  
 
-👋 Hi! I'm **Misha Golikov**, a passionate **Software Engineer** based in Philadelphia, PA. I specialize in **full-stack web development**, working with **React, Next.js, JavaScript, TypeScript, and Node.js**. I'm always eager to learn new technologies and build innovative, high-impact applications.  
+👋 Hi! I'm **Misha Golikov**, a passionate **Software Engineer** based in Philadelphia, PA.
 
 📧 **Contact Me**: [misha1998@gmail.com](mailto:misha1998@gmail.com)  
 🔗 **LinkedIn**: [linkedin.com/in/mishagolikov](https://linkedin.com/in/mishagolikov)  
