@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/mishagolikov.github.io/static/css/main.2db33d1e.css",
+    "main.js": "/mishagolikov.github.io/static/js/main.9579c669.js",
+    "static/media/aboutBW.jpeg": "/mishagolikov.github.io/static/media/aboutBW.7afa567c43127e8ab65d.jpeg",
+    "static/media/Resume.pdf": "/mishagolikov.github.io/static/media/Resume.f654b1c6a3980fa4b5aa.pdf",
+    "static/media/profileBW.jpg": "/mishagolikov.github.io/static/media/profileBW.8ee079a92728716641d2.jpg",
+    "index.html": "/mishagolikov.github.io/index.html",
+    "main.2db33d1e.css.map": "/mishagolikov.github.io/static/css/main.2db33d1e.css.map",
+    "main.9579c669.js.map": "/mishagolikov.github.io/static/js/main.9579c669.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2db33d1e.css",
+    "static/js/main.9579c669.js"
+  ]
+}
