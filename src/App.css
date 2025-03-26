@@ -1,6 +1,7 @@
 /* GOOGLE FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+/* update font to poppins and fix oversize name on /home */
 /* CSS VARIABLES */
 :root {
     --header-height: 3rem;
@@ -8,7 +9,7 @@
     --hue: 0;
     --sat: 0%;
     --title-color: hsl(var(--hue), var(--sat), 80%);
-    --title-color-dark: hsl(75, 46%, 70%);
+    --title-color-dark: hsl(332, 89%, 49%);
     --text-color: hsl(var(--hue), var(--sat), 90%);
     --body-color: hsl(var(--hue), var(--sat), 10%);
     --container-color: hsl(var(--hue), var(--sat), 15%);
@@ -44,7 +45,7 @@
 /* Light Theme */
 :root.light-theme {
     --title-color: hsl(var(--hue), var(--sat), 20%);
-    --title-color-dark: hsl(75, 46%, 51%);
+    --title-color-dark: hsl(332, 89%, 49%);
     --text-color: hsl(var(--hue), var(--sat), 46%);
     --body-color: hsl(var(--hue), var(--sat), 98%);
     --container-color: #fff;
@@ -53,7 +54,7 @@
 /* Dark Theme */
 :root.dark-theme {
     --title-color: hsl(var(--hue), var(--sat), 80%);
-    --title-color-dark: hsl(75, 46%, 70%);
+    --title-color-dark: hsl(332, 89%, 49%);
     --text-color: hsl(var(--hue), var(--sat), 90%);
     --body-color: hsl(var(--hue), var(--sat), 10%);
     --container-color: hsl(var(--hue), var(--sat), 15%);
@@ -92,11 +93,19 @@ textarea {
     font-size: var(--normal-font-size);
 }
 
-body {
+/* body {
     background-color: var(--body-color);
     color: var(--text-color);
+} */
+body {
+    background: linear-gradient(to bottom, var(--body-color) 50%, var(--title-color-dark));
+    color: var(--text-color);
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* very important to ensure footer on mobile disappears properly */
 }
-
 h1,
 h2,
 h3 {
@@ -207,8 +216,6 @@ img {
         margin-bottom: var(--mb-3);
     }
 }
-
-@media screen and (max-width: 576px) {}
 
 @media screen and (max-width: 350px) {
     :root {

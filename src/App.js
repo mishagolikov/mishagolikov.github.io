@@ -1,39 +1,43 @@
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
+import ScrollUp from './components/scrollup/ScrollUp';
 import Home from './components/home/Home';
 import About from './components/about/About';
 import Skills from './components/skills/Skills';
-/* import Services from './components/services/Services';
- */import Qualification from './components/qualification/Qualification';
-/* import Testimonials from './components/testimonials/Testimonials';
- */import Contact from './components/contact/Contact';
-import Footer from './components/footer/Footer';
-import ScrollUp from './components/scrollup/ScrollUp';
-/* import Portfolio from './components/projects/Portfolio';
- */
-const App = () => {
+import Qualification from './components/qualification/Qualification';
+import Contact from './components/contact/Contact';
 
-  
+const App = () => {
+  const [showFooter, setShowFooter] = useState(window.innerWidth > 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setShowFooter(window.innerWidth > 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
-    <>
-      <Header/>
-      
-      <main className='main'>
-        <Home />
-        
-        <About />
-        <Skills />
-        {/* <Services /> */}
-        <Qualification />
-        {/* <Portfolio /> */}
-        {/* <Testimonials /> */}
-        <Contact />
+    <Router>
+      <Header />
+      <main className="main">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/qualification" element={<Qualification />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </main>
-      <Footer />
+      {showFooter && <Footer />} {/* Conditionally render Footer */}
       <ScrollUp />
-    </>
+    </Router>
   );
-}
+};
 
 export default App;
