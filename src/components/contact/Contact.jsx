@@ -9,7 +9,7 @@ const Contact = () => {
     const sendEmail = (e) => {
         e.preventDefault();
     
-        emailjs.sendForm('service_s53x8mc', 'template_fwq8n7v', form.current, 'cXginQ40keRVEt1YV')
+        emailjs.sendForm('service_2zq3f3f', 'template_3z544ex', form.current, 'LT-gFFOEv7hAXjx-s')
         e.target.reset();
     };
   
@@ -20,7 +20,7 @@ const Contact = () => {
 
         <div className="contact__container container grid">
             <div className="contact__content">
-                <h3 className="contact__title">Talk to me</h3>
+                <h3 className="contact__title">Write Me an Email</h3>
                 
                 <div className="contact__info">
                     <div className="contact__card">
@@ -30,7 +30,7 @@ const Contact = () => {
                         <span className="contact__card-data">misha1998@gmail.com</span>
                         
                         <a href="mailto:misha1998@gmail.com" className="contact__button">
-                            Write Me{" "} 
+                            Email Me{" "} 
                             <HiOutlineArrowSmRight className="contact__button-icon" />
                         </a>
                     </div>
@@ -38,7 +38,7 @@ const Contact = () => {
             </div>
 
             <div className="contact__content">
-                <h3 className="contact__title">What's the project?</h3>
+                <h3 className="contact__title">Send Me a Message Directly</h3>
 
                 <form ref={form} onSubmit={sendEmail} className="contact__form">
                     <div className="contact__form-div">
@@ -52,8 +52,8 @@ const Contact = () => {
                     </div>
 
                     <div className="contact__form-div contact__form-area">
-                        <label className="contact__form-tag">Project</label>
-                        <textarea name="project" cols="30" rows="10" className="contact__form-input" placeholder="Provide some project details..."></textarea>
+                        <label className="contact__form-tag">Message</label>
+                        <textarea name="project" cols="30" rows="10" className="contact__form-input" placeholder="Type your message"></textarea>
                     </div>
 
                     <button href="#contact" className="button button--flex">

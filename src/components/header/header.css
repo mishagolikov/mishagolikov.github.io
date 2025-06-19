@@ -4,7 +4,8 @@
     top: 0;
     left: 0;
     z-index: var(--z-fixed);
-    background-color: var(--body-color);
+    /* background-color: var(--body-color); */
+    background-color: #0A0A0A;
 }
 
 .nav {
@@ -68,8 +69,8 @@
 /* BREAK POINTS */
 @media screen and (max-width: 768px) {
     .header {
-        top: initial;
-        bottom: 0;
+        top: 0;
+        bottom: initial;
     }
 
     .nav {
@@ -78,18 +79,20 @@
 
     .nav__menu {
         position: fixed;
-        bottom: -100%;
+        top: -100%;           /* Start hidden above the viewport */
         left: 0;
         width: 100%;
-        background-color: var(--body-color);
+        background-color: #0A0A0A;
         padding: 2rem 1.5rem 4rem;
-        box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
-        border-radius: 1.5rem 1.5rem 0 0;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15); /* shadow below */
+        border-radius: 0 0 1.5rem 1.5rem;           /* round bottom corners */
         transition: .3s;
+        bottom: initial;      /* Remove bottom positioning */
     }
 
     .show-menu {
-        bottom: 0;
+        top: 0;               /* Slide down into view */
+        bottom: initial;
     }
 
     .nav__list {
@@ -125,6 +128,10 @@
     .nav__close,
     .nav__toggle {
         display: block;
+    }
+
+    .nav__theme {
+        display: none;
     }
 }
 

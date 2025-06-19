@@ -10,7 +10,7 @@ const calculateYearsSince = (startDate) => {
 };
 
 const Info = () => {
-  const experienceYears = calculateYearsSince('2023-06-01');
+  const experienceYears = calculateYearsSince('2022-03-01');
 
   return (
     <div className="about__info grid">
